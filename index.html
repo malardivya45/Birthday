@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&family=Caveat:wght@500;600&family=Jost:wght@300;400;500&family=Cinzel:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;600&display=swap" rel="stylesheet">
+
+<!--
+  All stylesheets (birth.css, mama.css, family.css, me.css) have been
+  merged into this single birth.css, in the same order they used to
+  load in (chapters 1–6, then chapter 7's tractor/Mama styles, then
+  chapter 8's family-album styles, then the Me section's styles) —
+  so the cascade behaves the same as it did with separate files.
+  Only one stylesheet link is needed now.
+-->
+<link rel="stylesheet" href="birth.css">
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- ==========================================================
+     CHAPTER 1 — PASSWORD LOCK
+=========================================================== -->
+<div class="card" id="lockPage">
+  <h1>💙</h1>
+  <h2>A Little Secret...</h2>
+  <p>
+    This surprise was made with countless memories,
+    a little patience,
+    and a whole lot of love.
+    Only one person knows the password.
+    ✨ Maybe that's you...
+  </p>
+  <input type="password" id="pass" placeholder="Enter the Secret Password">
+  <button id="unlockBtn" onclick="checkPassword()">Unlock Surprise 💙</button>
+  <div id="attempt">💙 You have 3 attempts.</div>
+</div>
+
+<!-- ==========================================================
+     CHAPTER 2 — BIRTHDAY INTRO
+=========================================================== -->
+<div class="card hidden" id="introPage">
+  <h1>Happy Birthday</h1>
+  <h2>My Love ❤️</h2>
+  <p>
+    Six wonderful years...
+    Thousands of smiles.
+    Countless memories.
+    Endless love.
+    No matter where life takes us,
+    my favourite place will always be beside you.
+    Thank you for making every ordinary day feel magical.
+    Happy Birthday,
+    My Forever. 💙
+  </p>
+  <button id="openBook">Open My Heart ❤️</button>
+</div>
+
+<!-- 🎵 AUDIO — plays once, the instant "Open My Heart" is pressed -->
+<audio id="introOpenSound" preload="auto">
+  <source src="intro.mp3" type="audio/mp3">
+</audio>
+
+<!-- ==========================================================
+     CHAPTER 3 — HERO / STORY INTRODUCTION
+=========================================================== -->
+<section class="story-section hidden" id="storyPage">
+  <div class="story-text">
+    <h2 class="story-line story-heading" id="storyLine1">Every hero has one story</h2>
+    <p class="story-line story-sub" id="storyLine2"></p>
+    <p class="story-line story-body" id="storyLine3">Before he became someone's love..He was someone's whole world.</p>
+    <p class="story-line story-body" id="storyLine4">And this is the story of the people who made him who he is..</p>
+    <p class="story-line story-final" id="storyLine5"></p>
+  </div>
+  <button class="story-btn story-line" id="beginBtn">Come on</button>
+
+  <audio id="storyMusic" loop>
+    <source src="intro.mp3" type="audio/mp3">
+  </audio>
+</section>
+
+<audio id="storyBeginSound" preload="auto" loop>
+  <source src="heartbeat(chosic.com).mp3" type="audio/mpeg">
+</audio>
+
+<!-- ==========================================================
+     CHAPTER 4 — AMMA (MOM)
+=========================================================== -->
+<section class="mom-section hidden" id="momSection">
+
+    <div class="mom-page" id="momPage">
+
+        <img
+            src="mom back.png"
+            alt="Mom"
+            class="mom-image-back"
+            id="momImageBack"
+        >
+
+        <img
+            src="mom front.png"
+            alt="Mom"
+            class="mom-image"
+            id="momImage"
+        >
+
+        <div class="mom-cursor-dust" id="momCursorDust"></div>
+
+        <button
+            class="mom-continue"
+            id="momContinue"
+            type="button"
+        style="color: rgb(238, 224, 224); background-color: black; border-radius: 100%; text-align: right;">
+            >>
+        </button>
+
+    </div>
+
+    <div class="mom-intro" id="momIntro">
+
+        <div class="mom-curtain mom-curtain-left"></div>
+        <div class="mom-curtain mom-curtain-right"></div>
+
+        <button
+            class="mom-heart-button"
+            id="momHeartButton"
+            type="button"
+        >
+            <span class="mom-heart"></span>
+        </button>
+
+        <p
+            class="mom-touch-text"
+            id="momTouchText"
+        >
+            Touch the heart
+        </p>
+
+    </div>
+
+    <audio
+        id="momMusic"
+        preload="auto"
+    >
+        <source
+            src="mon song.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+    <audio id="momDiaSound" preload="auto">
+        <source src="mom-dia.mp3" type="audio/mpeg">
+    </audio>
+<audio id="heroSong" loop>
+    <source src="intro.mp3" type="audio/mpeg">
+</audio>
+<audio id="heartbeatSound" loop>
+    <source src="heartbeat(chosic.com).mp3" type="audio/mpeg">
+</audio>
+<audio id="ammaSong" loop>
+    <source src="mom song.mp3" type="audio/mpeg">
+</audio>
+</section>
+
+<!-- ==========================================================
+     CHAPTER 5 — DAD
+=========================================================== -->
+<section class="dad-section hidden" id="dadSection">
+
+    <div class="dad-background"></div>
+
+    <div class="dad-intro-text" id="dadIntroText"></div>
+
+    <div class="dad-camera-area" id="dadCameraArea">
+        <img src="camera.jpg" alt="Vintage Camera" class="dad-camera" id="dadCamera">
+        <p class="dad-camera-hint" id="dadCameraHint">Touch the camera</p>
+    </div>
+
+    <div class="dad-photo-container" id="dadPhotoContainer">
+        <div class="dad-photo" id="dadPhoto">
+            <img src="appafront.jpeg" alt="Dad" class="dad-image" id="dadImage">
+            <div class="dad-develop-layer" id="dadDevelopLayer"></div>
+        </div>
+    </div>
+
+    <p class="dad-photo-hint" id="dadPhotoHint">Touch the photograph</p>
+
+    <div class="dad-fullscreen" id="dadFullscreen">
+        <img src="dad back.png" alt="Dad" class="dad-full-image">
+        <div class="dad-full-overlay"></div>
+        <div class="dad-message">
+            <p class="dad-line-one"></p>
+            <p class="dad-line-two"></p>
+        </div>
+        <button class="dad-continue" id="dadContinue" type="button">Continue</button>
+    </div>
+
+    <audio id="cameraShutter" preload="auto">
+        <source src="camerashutter.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="dadMusic" preload="auto" loop>
+        <source src="dad song.mp3" type="audio/mpeg">
+    </audio>
+
+</section>
+
+<!-- ==========================================================
+     CHAPTER 6 — CHILDHOOD — "The Memory Box"
+=========================================================== -->
+<section class="hidden" id="childhoodScene">
+
+  <div class="ch-bg"></div>
+
+  <div class="ch-clouds" id="chClouds" aria-hidden="true">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--1">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--1">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--2">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--2">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--3">
+    <img src="cloud2.png" alt="" class="ch-cloud-img ch-cloud-img--3">
+  </div>
+
+  <div class="ch-dust" id="chDust"></div>
+
+  <p class="ch-eyebrow">a box of small, ordinary wonders</p>
+
+  <div class="memory-box" id="memoryBox" tabindex="0" role="button" aria-label="Open the memory box">
+    <div class="box-glow"></div>
+    <div class="box-body"></div>
+    <div class="box-clasp"></div>
+    <div class="box-lid"></div>
+  </div>
+  <p class="box-hint" id="boxHint">touch the box</p>
+
+  <div class="polaroid-backdrop" id="polaroidBackdrop"></div>
+  <div class="polaroid-field" id="polaroidField"></div>
+
+  <button class="ch-continue hidden" id="childhoodContinue">Continue</button>
+
+  <audio id="childhoodContinueSound" preload="auto">
+    <source src="introo-bgm.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="childhoodPopSound" preload="auto">
+    <source src="boxout.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="childhoodCircleSound" preload="auto">
+    <source src="child.mp3" type="audio/mpeg">
+  </audio>
+
+</section>
+
+<!-- ==========================================================
+     CHAPTER 7 — MAMA / UNCLE — "The Tractor"
+     Ported in from the standalone mama.html page. Both pieces of
+     that page (the tractor intro and the Mama reveal) now live
+     inside one #uncleSection wrapper so it can be shown/hidden
+     the same way every other chapter in this story is: via
+     revealChapter()/"hidden" from birth.js.
+=========================================================== -->
+<section class="hidden" id="uncleSection">
+
+    <!-- ======================================
+         TRACTOR INTRO
+    ======================================= -->
+
+    <div id="tractorScene">
+
+        <!-- White screen -->
+        <div id="whiteScreen">
+
+            <h1>MEMORIES</h1>
+
+            <p>
+                Every memory has a beginning...
+            </p>
+
+        </div>
+
+        <!-- CHANGE THIS TO YOUR TRACTOR IMAGE -->
+        <img
+            id="tractor"
+            src="tractorimg.png"
+            alt="Tractor"
+        >
+
+        <!-- Click instruction -->
+        <div id="clickText">
+
+            <h2>
+                Some memories begin here...
+            </h2>
+
+            <p>
+                Click anywhere to continue
+            </p>
+
+        </div>
+
+        <!-- 🎵 tractor engine — starts the moment the tractor scene is
+             tapped, stops the instant the white canvas fully covers
+             the screen 8s later (see birth.js). Moved into the DOM
+             (was previously created with `new Audio(...)` off-page,
+             which meant it never got the error-logging or the
+             stopAllAudioExcept() safety net every other sound here
+             gets). CHANGE src TO YOUR TRACTOR ENGINE SOUND. -->
+        <audio id="tractorSound" preload="auto" loop>
+            <source src="tractor.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+
+    <!-- ======================================
+         MAMA SECTION
+         Starts hidden inline — birth.js flips this to visible
+         once the tractor sequence finishes (mirrors what the
+         old standalone page's "show" class was meant to do,
+         guaranteed to work even before mama.css is wired in).
+    ======================================= -->
+
+    <div id="mamaSection" style="display:none;">
+
+        <!-- Falling particles -->
+        <div id="particles"></div>
+
+        <!-- Left text -->
+        <div id="leftContent">
+
+            <p class="smallHeading">
+                ♥ A LITTLE MIRACLE ♥
+            </p>
+
+            <h1 style=" font-family: Georgia, serif;
+
+    color: #a00000;
+
+    font-size: 100px;
+
+    font-weight: normal;
+
+    letter-spacing: 15px;
+
+    margin-top: 15px;">
+                MAMA
+            </h1>
+
+            <div class="line"></div>
+
+            <h2>
+                Who was there<br>
+                before anyone else?
+                <b> MAMA</b>
+            </h2>
+
+            <p class="story">
+                "தாய்மாமன் என்ற உறவு… கொஞ்சம் கண்டிப்பு, நிறைய அன்பு."
+
+                <br><br>
+
+                "More than an uncle, a constant part of my story."
+
+                <br><br>
+
+                And through every chapter
+                of your life,
+                he remained your safest place.
+
+            </p>
+
+            <p class="quote"></p>
+
+        </div>
+
+        <!-- Right photo -->
+        <div id="rightContent">
+
+            <!-- CHANGE THESE TO YOUR PHOTOS -->
+            <img
+                class="smallPhoto photoOne"
+                src="Mamasmall.png"
+            >
+
+            <img
+                class="smallPhoto photoTwo"
+                src="Mamasmall.png"
+            >
+
+            <!-- Flip card -->
+            <div
+                id="flipCard"
+                class="flipCard"
+            >
+
+                <!-- FRONT -->
+                <div class="cardFace front">
+                    <img
+                        src="mamapic.png"
+                        alt="Mama"
+                    >
+                </div>
+
+                <!-- BACK -->
+                <div class="cardFace back">
+                    <img
+                        src="mama with son.png"
+                        alt="Mama Memory"
+                    >
+                </div>
+
+            </div>
+
+            <p class="flipText">
+                Touch the memory ♥
+            </p>
+
+        </div>
+
+        <!-- 🎵 Mama music — starts right after the tractor sequence
+             ends, once the white canvas covers the screen. -->
+        <audio
+            id="mamaMusic"
+            preload="auto"
+            loop
+        >
+            <source
+                src="Mamasong.mp3"
+                type="audio/mpeg"
+            >
+        </audio>
+
+        <!-- =================================================
+             CONTINUE — reuses the exact same round black ">>"
+             button style as momContinue on Amma's page, so it
+             matches the rest of the story. Starts hidden, faded
+             in a few seconds after Mama's page appears (see
+             birth.js), and takes the person to the family-album
+             carousel page on click.
+        ================================================= -->
+        <button
+            class="mom-continue uncle-continue"
+            id="uncleContinue"
+            type="button"
+        style="color: rgb(238, 224, 224); background-color: black; border-radius: 100%; text-align: right;">
+            >>
+        </button>
+
+    </div>
+    
+
+</section>
+<section class="fullfamily hidden" id="familySection">
+<section class="family">
+
+    <!-- Falling golden decorations -->
+    <div class="falling" id="falling"></div>
+
+
+    <!-- Heading -->
+    <h1>Namakana nalu peruh</h1>
+
+
+    <!-- PHOTO STAGE -->
+    <div class="photo-stage">
+
+        <!-- LEFT WAITING PHOTO -->
+        <div class="polaroid side-left" id="leftCard">
+
+            <img id="leftImg" src="" alt="">
+
+            <div class="caption" id="leftName"></div>
+
+        </div>
+
+
+        <!-- CENTER MAIN PHOTO -->
+        <div class="polaroid main" id="centerCard">
+
+            <img id="centerImg" src="" alt="">
+
+            <div class="caption" id="centerName"></div>
+
+        </div>
+
+
+        <!-- RIGHT WAITING PHOTO -->
+        <div class="polaroid side-right" id="rightCard">
+
+            <img id="rightImg" src="" alt="">
+
+            <div class="caption" id="rightName"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SAFE NAVIGATION -->
+    <div class="buttons">
+
+        <button id="previous">←</button>
+
+        <button id="next">→</button>
+
+    </div>
+
+    <button
+        class="mom-continue family-continue hidden"
+        id="familyContinue"
+        type="button"
+        aria-label="Continue">
+        →
+    </button>
+
+
+    <!-- SONG -->
+    <audio id="song"></audio>
+</section>
+</section>
+
+<!-- ==========================================================
+     TRANSITION TO ME SECTION
+     The old ">>" navigated to a separate me.html page. Now
+     that everything lives on one page, "transitionArrow" is a
+     real button (not a link) — clicking it hands off straight
+     to the Me section below, see birth.js.
+=========================================================== -->
+<div class="family-me-transition hidden" id="familyMeTransition">
+  <div class="pink-particles" id="pinkParticles"></div>
+  <button type="button" class="transition-arrow" id="transitionArrow" aria-label="Enter My Story">
+    ↓
+  </button>
+</div>
+
+<div class="light-bridge" id="lightBridge" aria-hidden="true"></div>
+
+<!-- ==========================================================
+     CHAPTER 9 — ME — "The Story"
+     Ported in from the standalone me.html page. Stays hidden
+     until the Family chapter hands off control via
+     window.startMeSection() (see birth.js). Everything below is
+     wrapped in #meSection so its styles/behaviour stay isolated
+     from every earlier chapter (see the "ME SECTION — SCOPED"
+     block in birth.css).
+=========================================================== -->
+<div id="meSection">
+
+<!-- GLOBAL TRANSITION (Me section's own scene-to-scene wipe) -->
+<div id="transitionOverlay" class="transition-overlay">
+    <div class="transition-paper"></div>
+    <div class="transition-dark"></div>
+</div>
+
+<!-- BACKGROUND MUSIC (intro scene + first game) -->
+<audio
+    id="bgMusic"
+    src="me intro.mp3"
+    preload="auto">
+</audio>
+
+<!-- PHOTO SECTION MUSIC — starts the instant the photo scene opens,
+     loops for as long as that scene is on screen, and is stopped
+     the moment the video scene opens (see openVideo() in birth.js).
+     REPLACE the empty src below with your song file path. -->
+<audio id="photoMusic" preload="auto" loop>
+    <source src="seelay.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LETTER SCENE MUSIC — starts when "PLAY MY SONG" is tapped, loops
+     for as long as the letter page is open, stops the instant
+     "TURN THE PAGE" is clicked (see turnPage handler in birth.js).
+     REPLACE the empty src below with your song file path. -->
+<audio id="letterMusic" preload="auto" loop>
+    <source src="Birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- INTRO SCENE -->
+<section id="introScene" class="scene intro-scene">
+
+    <div class="intro-background">
+        <div class="intro-glow glow-one"></div>
+        <div class="intro-glow glow-two"></div>
+        <div class="intro-particle p1"></div>
+        <div class="intro-particle p2"></div>
+        <div class="intro-particle p3"></div>
+        <div class="intro-particle p4"></div>
+        <div class="intro-particle p5"></div>
+    </div>
+
+
+    <!-- FIXED Z-INDEX WRAPPER -->
+    <div class="intro-content">
+
+        <div class="memory-lens">
+
+            <div class="lens-ring ring-one"></div>
+            <div class="lens-ring ring-two"></div>
+            <div class="lens-ring ring-three"></div>
+
+            <div class="lens-core">
+                <div class="lens-light"></div>
+                <div class="lens-symbol">✦</div>
+            </div>
+
+        </div>
+
+
+        <div class="intro-text">
+
+            <p class="intro-small">
+                A DIFFERENT SIDE OF THE STORY
+            </p>
+
+            <h1>
+                BEFORE YOU SEE<br>
+                THE MEMORIES
+            </h1>
+
+            <p class="intro-description">
+                There is something waiting beyond this moment.
+            </p>
+
+        </div>
+
+
+        <button
+            id="enterIntro"
+            class="cinematic-btn intro-enter">
+            ENTER
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- INTRO GAME -->
+<section id="gameScene" class="scene game-scene">
+
+    <div class="game-bg"></div>
+
+    <div class="game-wrapper">
+
+        <div class="game-heading">
+
+            <p class="eyebrow">
+                SOMETHING IS CALLING
+            </p>
+
+            <h2>
+                Find the memory
+            </h2>
+
+            <p class="game-instruction">
+                One of these signals is different.
+                Find the one that feels alive.
+            </p>
+
+        </div>
+
+
+        <!-- BIGGER CLICK AREA -->
+        <div
+            id="signalGrid"
+            class="signal-grid">
+
+            <button
+                class="signal-card"
+                data-signal="1"
+                type="button">
+
+                <span class="signal-orbit"></span>
+                <span class="signal-core"></span>
+
+                <span class="signal-label">
+                    SIGNAL 01
+                </span>
+
+            </button>
+
+
+            <button
+                class="signal-card"
+                data-signal="2"
+                type="button">
+
+                <span class="signal-orbit"></span>
+                <span class="signal-core"></span>
+
+                <span class="signal-label">
+                    SIGNAL 02
+                </span>
+
+            </button>
+
+
+            <button
+                class="signal-card"
+                data-signal="3"
+                type="button">
+
+                <span class="signal-orbit"></span>
+                <span class="signal-core"></span>
+
+                <span class="signal-label">
+                    SIGNAL 03
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <div class="game-clue">
+
+            <span class="clue-line"></span>
+
+            <p>
+                FOLLOW THE LIGHT<br>
+                THAT FEELS THE MOST ALIVE.
+            </p>
+
+            <span class="clue-line"></span>
+
+        </div>
+
+
+        <div
+            id="gameSuccess"
+            class="game-success">
+
+            <div class="success-symbol">
+                ✓
+            </div>
+
+            <h3>
+                YOU FOUND IT
+            </h3>
+
+            <p>
+                Some memories don't need to be explained.
+            </p>
+
+            <button
+                id="continueToPhotos"
+                class="cinematic-btn">
+                ENTER THE MEMORIES
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PHOTO SCENE -->
+<section id="photoScene" class="scene photo-scene">
+
+    <div class="heart-flow" id="heartFlow"></div>
+
+    <div class="photo-content">
+
+        <div class="photo-heading">
+
+            <p class="eyebrow">
+                ONE MEMORY AT A TIME
+            </p>
+
+            <div
+                id="photoCounter"
+                class="photo-counter">
+                01 / 05
+            </div>
+
+        </div>
+
+
+        <div
+            id="photoStage"
+            class="photo-stage">
+
+            <div
+                id="photoCard"
+                class="photo-card">
+
+                <img
+                    id="memoryPhoto"
+                    src="mine.jpg"
+                    alt="Memory">
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-bottom">
+
+            <p id="photoHint">
+                CLICK THE MEMORY
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PHOTO ARRANGEMENT -->
+<section
+    id="photoArrange"
+    class="scene photo-arrange">
+
+    <div class="arrange-background"></div>
+
+    <div class="arrange-content">
+
+        <p class="eyebrow">
+            KEEP LOOKING
+        </p>
+
+        <h2>
+            Some memories<br>
+            hide in plain sight.
+        </h2>
+
+
+        <div class="scrapbook-grid">
+
+            <div class="scrap-photo photo-a">
+                <img
+                    src="me 1.jpeg"
+                    alt="Memory">
+            </div>
+
+            <div class="scrap-photo photo-b">
+                <img
+                    src="me 2.jpeg"
+                    alt="Memory">
+            </div>
+
+            <div class="scrap-photo photo-c">
+                <img
+                    src="me 3.jpeg"
+                    alt="Memory">
+            </div>
+
+            <div class="scrap-photo photo-d">
+                <img
+                    src="me 4.jpeg"
+                    alt="Memory">
+            </div>
+
+            <div class="scrap-photo photo-e">
+                <img
+                    src="me 5.jpeg"
+                    alt="Memory">
+            </div>
+
+        </div>
+
+
+        <div class="unlock-game">
+
+            <p class="unlock-clue">
+                FIND THE WARM LIGHT
+            </p>
+
+
+            <div class="unlock-lights">
+
+                <!-- BIGGER CLICKABLE AREAS -->
+
+                <button
+                    class="unlock-light"
+                    data-light="1"
+                    type="button">
+                    <span></span>
+                    <strong>01</strong>
+                </button>
+
+                <button
+                    class="unlock-light"
+                    data-light="2"
+                    type="button">
+                    <span></span>
+                    <strong>02</strong>
+                </button>
+
+                <button
+                    class="unlock-light"
+                    data-light="3"
+                    type="button">
+                    <span></span>
+                    <strong>03</strong>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- VIDEO SCENE -->
+<section
+    id="videoScene"
+    class="scene video-scene">
+
+    <div class="cinema-top-bar"></div>
+
+    <div class="video-content">
+
+        <p class="eyebrow">
+            THEN CAME THIS
+        </p>
+
+
+        <div class="theatre-frame">
+
+            <div class="theatre-light"></div>
+
+            <video
+                id="mainVideo"
+                src="vedio.mp4"
+                controls
+                playsinline
+                preload="metadata">
+            </video>
+
+        </div>
+
+
+        <div class="video-bottom">
+
+            <p>
+                WATCH IT TILL THE END.
+            </p>
+
+            <button
+                id="continueToLetter"
+                class="cinematic-btn">
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="cinema-bottom-bar"></div>
+
+</section>
+
+
+
+<!-- LETTER SCENE -->
+<section
+    id="letterScene"
+    class="scene letter-scene">
+
+    <div class="letter-paper-texture"></div>
+
+    <div class="letter-wrap">
+
+        <div class="letter-top">
+
+            <p class="eyebrow">
+                A FEW WORDS
+            </p>
+
+            <h2>
+                If you ever wonder
+                what all of this meant...
+            </h2>
+
+        </div>
+
+ <div class="letter-action">
+
+            <button
+                id="playSong"
+                class="song-btn"
+                type="button">
+
+                <span class="song-icon">♫</span>
+
+                <span>
+                    PLAY MY SONG
+                </span>
+
+            </button>
+
+        </div>
+        <!-- LEFT SCRAPBOOK PHOTO -->
+        <div class="letter-photo letter-photo-left">
+
+            <img
+                src="letter 1.jpeg"
+                alt="Memory">
+
+        </div>
+
+
+        <!-- RIGHT SCRAPBOOK PHOTO -->
+        <div class="letter-photo letter-photo-right">
+
+            <img
+                src="letter 2.jpeg"
+                alt="Memory">
+
+        </div>
+
+
+        <!-- FULL LETTER -->
+        <div class="letter-content">
+
+            <p>
+               Heyyyyy Mama!!!
+               Ennoodaa kanavareyyyyyyyyy....... Ennodaa Challameyyyyyyyy....
+               Unnaya nan enoda 6th standard la pathennn who cares for me genuinly with lots of love
+               apo erunthu unnaya nan ennakuh rmba pifikum ennaku pudikum  but unnakih pidikumanu therila 
+               nanu apvuh unnaya otitu sandaii katitu santhosama jly ah enjoyy panituu erupom bus laa nee neraya sapdrakuh vagji tharuva
+               apdywhh unoda 8th 9th oru mariii ooochu aprooo samathamey ellama lockdown apo la ethuuvm therijukala 
+               aprooo apdyeh poochu epdi ore person erunthaga avlotha...memories la unna carry panitu erunthom
+               aproo mavydyu enoda 9th means unoda 11th la oru 15days ne varala vera schl marita nu nenacha 
+               apro 15days kalichu bag matituh appa voda hm room munnadi ninutu eruntha apo unaya nan patha nee ennaya maranhtuta pola ennaya kanudkavey ella 
+               appa tha unaya vantu vitutu kootitu ponaga nee enna pathu pesvey ela rennakuh matuh tha unna pidichurukuh pola nee maranthta nuh nenacha aproo bus la vara strt panna
+               apdyeh neeyu nanuh indhu va vechu peitu fu panitu erunthom apoveyy unmela possevive anaga unnakuh love porposal vanthcuhu ennya ala nee kandukala aproo last la tha neeyu nanuh jly ah eruhyom 
+               12 th ponom neeyu nanuh mattuh than ver yarumey ella namma luck ku ellaru vra schl pooitaga neyu annuh jly ah eruthom sandi potom
+               lovers nu theriyama anna tagachi h eruthom nee kooptanu gudumaganagalam la eragi saotpm udt pooi saptom jly ponim
+               rakhi kuduthen🤣..But unfortunately nee katala ennaouh seriyana insulting to the coree aproo apdyehh poochu sept 8 apo nee ennakuh kadasii avaravara mari erutha peslam ellana epdyeh vitralam nu soona 
+               nanuh vituta 2dys mela ennla pesa mudyma eruka mudila mavudyu pesnom  love la suthama hope eh ella thevaye elatha velai nu 10th vara suthama pidiktha oru visitha 
+               entha marii oru person life la miss panitu mavydu engha pooi thedrathunuh yoosichu apro love eh panirlm kadasii vara nee matum thn atheyy mind la tha nee erukinu therijuchu spet 15
+               aniku un bday ennkakuh antah aniku periods athu unnakuh theriyumanu therla but apo purijikitta neyu nanuh orey seat la that day u care for me that i want for life tym nuh thoona vecha v=bcs ennoda hardest part la nee apdii purijikitu enakuh suprt pannathu nee matum tha
+               which feels differntfor me avlothann ennaya saachu puta
+               love la wrk aguma nu na enamo nenchutu erutha oru person kaga namma life en matjikanum arrange marage tha tahu vara nama lfe jly ah namam wish kuh kondu plam nu nenchutu erutha oru girll 1st time nnakagha ellamey mathikituu
+               un pinnadi naii marii suthitu eruntha nee peslana aluven nee lena aluva retunalum un pinnadi tha varuva ellamey unnakagha tha panitu erutnha
+               na matuh ella neyuh thana proo nee kongu clg ponba nanuh kongu chl vanthen but unluckly clg mari poitenn ethu nee marakve mudytaha manika mudiyatha oru phase the but we overcomes because of our love 
+               athu kuh aproo the nerya sandaii kanaku valaku ellama potom setharalam valkai la enna enna yooika kodathu nu enachmo elamey yosichom aproo apovum vidla mavudyu oru "love you" sonna falla agar payanachu takku takku nu kovathula erunthu sachu 
+               love mood vara vechuuuh romace mood vara vechu apdi epdii nu kujal panuvom 
+               aproo last ah oruu kathai maii namma life eh un munnadi typ panra alavukuh oru scl dayy kuh na prepare panitu eruken oru 2 mnths ahh nee wrk padipu nu pora nu ennaipa but jt enna amrii design epdiiarrange pnarathu phtos epdii edukurathunuh oreyy planning la tha poogum 
+               but unnakuh pudichamarii ellanalum ennaku therija oruu alavana arivu vechu unnakuh oruu spcl aana gft enala mudijatha kuduka poren pudikum nu nambrenn ethathu knjoo eroor s erutnha adjust panik bcs ur wife had avlothan arivu and finnaly 
+               HAPIEST BIRTHDAYY DA MAMA💙 </p>
+
+        </div>
+
+
+       
+
+
+        <!-- JS WILL ACTIVATE THIS -->
+        <div
+            id="letterFinish"
+            class="letter-finish">
+
+            <button
+                id="turnPage"
+                class="cinematic-btn"
+                type="button">
+                TURN THE PAGE
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FINAL BIRTHDAY SCENE -->
+<section
+    id="finalScene"
+    class="scene final-scene">
+
+    <div class="night-sky">
+
+        <div class="stars"></div>
+
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="star star-6"></div>
+        <div class="star star-7"></div>
+        <div class="star star-8"></div>
+
+    </div>
+
+
+    <!-- REALISTIC-STYLE FIREWORK / CRACKER AREA -->
+    <div
+        id="fireworks"
+        class="fireworks-container">
+
+        <div class="firework firework-one">
+            <span></span>
+        </div>
+
+        <div class="firework firework-two">
+            <span></span>
+        </div>
+
+        <div class="firework firework-three">
+            <span></span>
+        </div>
+
+        <div class="firework firework-four">
+            <span></span>
+        </div>
+
+        <div class="firework firework-five">
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div
+        id="birthdayMessage"
+        class="birthday-message">
+
+        <p class="birthday-small">
+            AND FINALLY...
+        </p>
+
+        <h1>
+            HAPPY<br>
+            BIRTHDAY
+        </h1>
+
+        <div class="birthday-line"></div>
+
+        <p class="birthday-name">
+            THIS MOMENT IS YOURS.
+        </p>
+
+    </div>
+
+
+    <div
+        id="voiceIndicator"
+        class="voice-indicator">
+
+        <div class="voice-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <p>
+            LISTEN
+        </p>
+
+    </div>
+
+
+    <!-- FINAL VOICE -->
+    <audio id="myVoice" src="final.mp3" preload="auto"></audio>
+
+</section>
+
+</div><!-- /#meSection -->
+
+<script src="birth.js"></script>
+</body>
+</html>
