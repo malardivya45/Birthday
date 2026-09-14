@@ -113,7 +113,7 @@ body::before{
 }
 
 h1{
-  font-family:'Great Vibes',cursive;
+  font-family:'Great Vibes',sans-serif;
   font-size:58px;
   color:#7dd3fc;
   text-shadow:0 0 15px #2563eb;
