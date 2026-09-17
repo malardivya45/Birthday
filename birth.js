@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
      CHAPTER 1 — PASSWORD
   =========================================================== */
 
-  const PASSWORD = "1509";
+  const PASSWORD = "Buukutyy";
   let chances = 3;
 
   window.checkPassword = function () {
